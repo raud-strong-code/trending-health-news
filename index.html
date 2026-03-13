@@ -5,92 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trending Health News</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #ffffff; color: #1f2937; font-family: 'Inter', sans-serif; }
-        .header { background-color: #f3f4f6; }
-        .hero { background-color: #f3f4f6; }
-        .card { background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
-        .card img { width: 100%; height: auto; }
-        .card-title { font-weight: 700; font-size: 1.25rem; }
-        .card-desc { font-size: 1rem; color: #4b5563; }
-        .blue-btn { background-color: #3b82f6; color: white; font-weight: 600; border-radius: 9999px; padding: 0.5rem 1rem; }
-        .blue-btn:hover { background-color: #2563eb; }
+        body { font-family: 'Inter', sans-serif; background-color: #f5f5f5; color: #1f1f1f; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .hero { background-color: #980f12; color: #ffffff; }
+        .card { background-color: #ffffff; border: 1px solid #e3e3e3; border-radius: 4px; }
+        .btn-red { background-color: #b1181c; color: #ffffff; }
+        .btn-red:hover { background-color: #9d1012; }
+        .text-muted { color: #6b7280; }
+        .text-green { color: #25a55b; }
+        .text-gold { color: #e7b84d; }
+        .main-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; }
+        @media (max-width: 1024px) { .main-grid { grid-template-columns: 1fr; } }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header py-4">
-        <nav class="container mx-auto flex justify-between items-center px-4">
-            <img src="logo.png" alt="Logo" class="h-8">
-            <ul class="flex space-x-4">
-                <li><a href="#" class="text-gray-600 hover:text-blue-600">Home</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600">About</a></li>
-                <li><a href="#" class="text-gray-600 hover:text-blue-600">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- 1. Top header bar -->
+    <header class="bg-white border-b border-[#efefef] py-4">
+        <div class="container flex justify-between items-center">
+            <div class="text-2xl font-medium">
+                <span class="text-black">Trending Health</span><span class="text-[#2563eb]">News</span>
+            </div>
+            <nav class="flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-[#b1181c]">Home</a>
+                <a href="#" class="hover:text-[#b1181c]">Reviews</a>
+                <a href="#" class="hover:text-[#b1181c]">Guides</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero py-16 text-center">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold mb-2">Trending Health News</h1>
-            <p class="text-xl mb-8 text-gray-600">Your source for the latest health updates and provider reviews.</p>
-            <button class="blue-btn">Get Started</button>
+    <!-- 2. Large red hero section -->
+    <section class="hero py-16">
+        <div class="container flex items-center justify-between">
+            <div class="max-w-lg">
+                <h1 class="text-5xl font-bold leading-tight mb-4">Best ED Providers of 2024</h1>
+                <p class="text-lg opacity-90 mb-6">Compare top erectile dysfunction treatment options and find the right one for you.</p>
+                <button class="btn-red py-3 px-6 rounded-full font-semibold text-sm">See Providers</button>
+            </div>
+            <img src="hero-image.png" alt="Hero Image" class="w-80 h-auto rounded-lg shadow-lg">
         </div>
     </section>
 
-    <section class="container mx-auto py-8 px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="card">
-            <img src="images/card1.png" alt="Card 1">
-            <div class="p-4">
-                <h2 class="card-title mb-2">Provider 1</h2>
-                <p class="card-desc mb-4">Short description of provider 1.</p>
-                <button class="blue-btn w-full">Visit</button>
+    <!-- 3. Main content area with 2-column layout -->
+    <main class="py-12">
+        <div class="container main-grid">
+            <!-- Left: ranked provider cards -->
+            <div>
+                <h2 class="text-3xl font-semibold mb-8">Top ED Providers</h2>
+                <div class="space-y-6">
+                    <!-- Card 1 -->
+                    <div class="card p-6">
+                        <div class="flex items-start space-x-4">
+                            <img src="images/card1.png" alt="Provider 1" class="w-32 h-32 object-cover rounded">
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-1">Hims</h3>
+                                <p class="text-muted text-sm mb-2">Affordable, discreet ED treatments</p>
+                                <ul class="list-disc pl-5 text-sm text-muted mb-4">
+                                    <li>Low cost options</li>
+                                    <li>Online consultations</li>
+                                    <li>Fast shipping</li>
+                                </ul>
+                                <button class="btn-red py-2 px-4 rounded-full font-semibold text-sm">Visit Site</button>
+                            </div>
+                            <div class="ml-auto text-right">
+                                <div class="text-green text-2xl font-bold">4.8</div>
+                                <div class="text-gold text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for 5 more cards, using images card2 to card6 -->
+                    <!-- Card 2 -->
+                    <div class="card p-6">
+                        <div class="flex items-start space-x-4">
+                            <img src="images/card2.png" alt="Provider 2" class="w-32 h-32 object-cover rounded">
+                            <div>
+                                <h3 class="text-2xl font-semibold mb-1">Roman</h3>
+                                <p class="text-muted text-sm mb-2">Comprehensive ED care</p>
+                                <ul class="list-disc pl-5 text-sm text-muted mb-4">
+                                    <li>Doctor support</li>
+                                    <li>Personalized plans</li>
+                                    <li>Ongoing care</li>
+                                </ul>
+                                <button class="btn-red py-2 px-4 rounded-full font-semibold text-sm">Visit Site</button>
+                            </div>
+                            <div class="ml-auto text-right">
+                                <div class="text-green text-2xl font-bold">4.5</div>
+                                <div class="text-gold text-sm">★★★★☆</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ... Add cards 3-6 similarly ... -->
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="images/card2.png" alt="Card 2">
-            <div class="p-4">
-                <h2 class="card-title mb-2">Provider 2</h2>
-                <p class="card-desc mb-4">Short description of provider 2.</p>
-                <button class="blue-btn w-full">Visit</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/card3.png" alt="Card 3">
-            <div class="p-4">
-                <h2 class="card-title mb-2">Provider 3</h2>
-                <p class="card-desc mb-4">Short description of provider 3.</p>
-                <button class="blue-btn w-full">Visit</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/card4.png" alt="Card 4">
-            <div class="p-4">
-                <h2 class="card-title mb-2">Provider 4</h2>
-                <p class="card-desc mb-4">Short description of provider 4.</p>
-                <button class="blue-btn w-full">Visit</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/card5.png" alt="Card 5">
-            <div class="p-4">
-                <h2 class="card-title mb-2">Provider 5</h2>
-                <p class="card-desc mb-4">Short description of provider 5.</p>
-                <button class="blue-btn w-full">Visit</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/card6.png" alt="Card 6">
-            <div class="p-4">
-                <h2 class="card-title mb-2">Provider 6</h2>
-                <p class="card-desc mb-4">Short description of provider 6.</p>
-                <button class="blue-btn w-full">Visit</button>
-            </div>
-        </div>
-    </section>
 
-    <footer class="bg-gray-100 py-8 text-center text-gray-600">
-        <p>&copy; 2024 Trending Health News. All rights reserved.</p>
+            <!-- Right: stacked sidebar widgets -->
+            <div class="space-y-6">
+                <!-- Widget 1: Ratings -->
+                <div class="card p-4">
+                    <h3 class="text-xl font-semibold mb-4">Top Rated</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>Hims</span>
+                            <span class="text-green">4.8</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>BlueChew</span>
+                            <span class="text-green">4.9</span>
+                        </div>
+                        <!-- Add more -->
+                    </div>
+                </div>
+                <!-- Widget 2: Quick Links or Ad -->
+                <div class="card p-4 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Quick Guide to ED</h3>
+                    <p class="text-sm text-muted mb-4">Learn the basics of ED treatments.</p>
+                    <button class="btn-red py-2 px-4 rounded-full font-semibold text-sm">Read Guide</button>
+                </div>
+                <!-- Add more widgets if in design -->
+            </div>
+        </div>
+    </main>
+
+    <!-- 4. Footer with 4 columns -->
+    <footer class="bg-white border-t border-[#e3e3e3] py-8">
+        <div class="container grid grid-cols-4 gap-8 text-sm text-gray-600">
+            <div>
+                <h4 class="font-semibold mb-2">About Us</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:text-red-600">Our Mission</a></li>
+                    <li><a href="#" class="hover:text-red-600">Team</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Resources</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:text-red-600">Blog</a></li>
+                    <li><a href="#" class="hover:text-red-600">Guides</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Legal</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:text-red-600">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-red-600">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-2">Contact</h4>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:text-red-600">Support</a></li>
+                    <li><a href="#" class="hover:text-red-600">Advertise</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container text-center text-xs mt-8">
+            &copy; 2024 Trending Health News. All rights reserved.
+        </div>
     </footer>
 </body>
 </html>
