@@ -3,113 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best ED Providers 2024 - Trending Health News</title>
+    <title>Trending Health News</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body { background-color: #1a202c; color: #f7fafc; }
-        .accordion { cursor: pointer; background-color: #2d3748; }
-        .panel { display: none; background-color: #4a5568; }
-        .card { background-color: #2d3748; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-        .blue-btn { background-color: #3182ce; }
-        .blue-btn:hover { background-color: #2b6cb0; }
+        body { background-color: #ffffff; color: #1f2937; font-family: 'Inter', sans-serif; }
+        .header { background-color: #f3f4f6; }
+        .hero { background-color: #f3f4f6; }
+        .card { background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+        .card img { width: 100%; height: auto; }
+        .card-title { font-weight: 700; font-size: 1.25rem; }
+        .card-desc { font-size: 1rem; color: #4b5563; }
+        .blue-btn { background-color: #3b82f6; color: white; font-weight: 600; border-radius: 9999px; padding: 0.5rem 1rem; }
+        .blue-btn:hover { background-color: #2563eb; }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans">
-    <header class="bg-gray-800 py-4 shadow-md">
+<body>
+    <header class="header py-4">
         <nav class="container mx-auto flex justify-between items-center px-4">
-            <h1 class="text-2xl font-bold">Trending Health News</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#" class="hover:text-blue-400">Home</a></li>
-                <li><a href="#" class="hover:text-blue-400">Providers</a></li>
-                <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+            <img src="logo.png" alt="Logo" class="h-8">
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Home</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">About</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-blue-600">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="bg-blue-900 py-20 text-center">
+    <section class="hero py-16 text-center">
         <div class="container mx-auto px-4">
-            <h2 class="text-5xl font-bold mb-4">Best ED Providers of 2024</h2>
-            <p class="text-xl mb-8">Compare top erectile dysfunction treatment options and find the right one for you.</p>
-            <a href="#providers" class="blue-btn text-white py-3 px-6 rounded-lg font-semibold">See Providers</a>
+            <h1 class="text-4xl font-bold mb-2">Trending Health News</h1>
+            <p class="text-xl mb-8 text-gray-600">Your source for the latest health updates and provider reviews.</p>
+            <button class="blue-btn">Get Started</button>
         </div>
     </section>
 
-    <section id="providers" class="container mx-auto py-16 px-4">
-        <h3 class="text-3xl font-bold mb-8 text-center">Top ED Providers Comparison</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="card p-6">
-                <img src="https://www.exploretreatments.com/wp-content/uploads/2023/05/hims-logo-1-300x150.png" alt="Hims Logo" class="mb-4 rounded mx-auto">
-                <h4 class="text-2xl font-bold mb-2 text-center">Hims</h4>
-                <p class="text-yellow-400 mb-4 text-center">★★★★★ 4.8/5</p>
-                <p class="mb-4 text-center">Affordable ED treatments with discreet delivery.</p>
-                <ul class="list-disc pl-5 mb-4">
-                    <li>Pros: Low cost, easy online consults, fast shipping</li>
-                    <li>Cons: Limited to certain medications</li>
-                </ul>
-                <a href="https://www.forhims.com" class="blue-btn text-white py-2 px-4 rounded font-semibold block text-center">Visit Site</a>
+    <section class="container mx-auto py-8 px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card">
+            <img src="images/card1.png" alt="Card 1">
+            <div class="p-4">
+                <h2 class="card-title mb-2">Provider 1</h2>
+                <p class="card-desc mb-4">Short description of provider 1.</p>
+                <button class="blue-btn w-full">Visit</button>
             </div>
-            <div class="card p-6">
-                <img src="https://www.exploretreatments.com/wp-content/uploads/2023/05/roman-logo-300x150.png" alt="Roman Logo" class="mb-4 rounded mx-auto">
-                <h4 class="text-2xl font-bold mb-2 text-center">Roman</h4>
-                <p class="text-yellow-400 mb-4 text-center">★★★★☆ 4.5/5</p>
-                <p class="mb-4 text-center">Comprehensive care with doctor support.</p>
-                <ul class="list-disc pl-5 mb-4">
-                    <li>Pros: Personalized plans, ongoing support</li>
-                    <li>Cons: Higher pricing</li>
-                </ul>
-                <a href="https://www.getroman.com" class="blue-btn text-white py-2 px-4 rounded font-semibold block text-center">Visit Site</a>
+        </div>
+        <div class="card">
+            <img src="images/card2.png" alt="Card 2">
+            <div class="p-4">
+                <h2 class="card-title mb-2">Provider 2</h2>
+                <p class="card-desc mb-4">Short description of provider 2.</p>
+                <button class="blue-btn w-full">Visit</button>
             </div>
-            <div class="card p-6">
-                <img src="https://www.exploretreatments.com/wp-content/uploads/2023/05/bluechew-logo-300x150.png" alt="BlueChew Logo" class="mb-4 rounded mx-auto">
-                <h4 class="text-2xl font-bold mb-2 text-center">BlueChew</h4>
-                <p class="text-yellow-400 mb-4 text-center">★★★★★ 4.9/5</p>
-                <p class="mb-4 text-center">Chewable tablets for convenient use.</p>
-                <ul class="list-disc pl-5 mb-4">
-                    <li>Pros: No water needed, subscription model</li>
-                    <li>Cons: Chewable form not for everyone</li>
-                </ul>
-                <a href="https://www.bluechew.com" class="blue-btn text-white py-2 px-4 rounded font-semibold block text-center">Visit Site</a>
+        </div>
+        <div class="card">
+            <img src="images/card3.png" alt="Card 3">
+            <div class="p-4">
+                <h2 class="card-title mb-2">Provider 3</h2>
+                <p class="card-desc mb-4">Short description of provider 3.</p>
+                <button class="blue-btn w-full">Visit</button>
             </div>
-            <!-- Add more providers to match reference -->
+        </div>
+        <div class="card">
+            <img src="images/card4.png" alt="Card 4">
+            <div class="p-4">
+                <h2 class="card-title mb-2">Provider 4</h2>
+                <p class="card-desc mb-4">Short description of provider 4.</p>
+                <button class="blue-btn w-full">Visit</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/card5.png" alt="Card 5">
+            <div class="p-4">
+                <h2 class="card-title mb-2">Provider 5</h2>
+                <p class="card-desc mb-4">Short description of provider 5.</p>
+                <button class="blue-btn w-full">Visit</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/card6.png" alt="Card 6">
+            <div class="p-4">
+                <h2 class="card-title mb-2">Provider 6</h2>
+                <p class="card-desc mb-4">Short description of provider 6.</p>
+                <button class="blue-btn w-full">Visit</button>
+            </div>
         </div>
     </section>
 
-    <section class="container mx-auto py-16 px-4 bg-gray-800">
-        <h3 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
-        <div class="space-y-4">
-            <div>
-                <div class="accordion p-4 rounded-lg" onclick="togglePanel(this)">
-                    What is ED?
-                </div>
-                <div class="panel p-4">
-                    Erectile Dysfunction (ED) is the inability to get or keep an erection firm enough for sexual intercourse.
-                </div>
-            </div>
-            <div>
-                <div class="accordion p-4 rounded-lg" onclick="togglePanel(this)">
-                    Are these treatments safe?
-                </div>
-                <div class="panel p-4">
-                    When prescribed by licensed doctors and used as directed, yes. Always consult a physician.
-                </div>
-            </div>
-            <!-- Match reference FAQs -->
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 py-8 text-center border-t border-gray-700">
+    <footer class="bg-gray-100 py-8 text-center text-gray-600">
         <p>&copy; 2024 Trending Health News. All rights reserved.</p>
-        <ul class="flex justify-center space-x-4 mt-4">
-            <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
-        </ul>
     </footer>
-
-    <script>
-        function togglePanel(element) {
-            const panel = element.nextElementSibling;
-            panel.style.display = panel.style.display === "block" ? "none" : "block";
-        }
-    </script>
 </body>
 </html>
